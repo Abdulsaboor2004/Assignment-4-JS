@@ -139,14 +139,52 @@ const ass_4_Obj = {
 
 
 
+let people = [
+  {name: 'Haris', age: 23},
+  {name: 'Huzaifa', age: 12},
+  {name: 'Salman', age: 53}
+];
+
+function getvalueofakey(arr, key) {
+  return arr.map(obj => obj[key]);
+}
+
+const names = getvalueofakey(people, 'name');
+console.log(names);
+
+// Done learned how to get a specific key using return arr.map(obj => obj[key])
+
 
 
 
 // QUESTION 7. Write a function that takes an array of strings as input and returns an array of all the unique strings in the array.
 
+let arr = ['shoes', 'pants', 'shirts','shoes']
 
 
+function removeduplicatestring(arr){
+return Array.from(new Set(arr));
+}
+
+let uniquestringsarray = removeduplicatestring(arr);
+console.log(uniquestringsarray)
+
+
+//Done and learned we can remove duplicate strings from an array using "new set"
+//Array.from(new Set(arr));
 
 
 
 // QUESTION 8. Write a function that takes an array of numbers as input and returns the product of all the numbers in the array.
+
+let array = [2, 3, 4, 8];
+
+function findProduct(arr) {
+  return arr.reduce((a, b) => a * b);
+}
+
+let productOfAllNum = findProduct(array);
+console.log(productOfAllNum);
+
+
+// Done and learned we can find product using return arr.reduce((a, b) => a * b);
